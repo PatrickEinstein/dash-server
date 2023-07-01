@@ -43,6 +43,12 @@ app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
+// Test Route
+
+app.get("/test", (req, res, next) => {
+  res.send("Welcome to this admin dashboard server");
+});
+
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 mongoose
